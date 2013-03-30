@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Markup;
 
 namespace Brighter
 {
@@ -22,6 +23,7 @@ namespace Brighter
     public partial class MainWindow : Window
     {
         MenuBar menu;
+        Tools toolPanel;
 
         public MainWindow()
         {
@@ -36,6 +38,10 @@ namespace Brighter
             Grid.SetRow(menu, 0);
             Grid.SetColumnSpan(menu, 2);
             this.MainGrid.Children.Add(menu);
+            toolPanel = new Tools();
+            Grid.SetColumn(toolPanel, 1);
+            Grid.SetRow(toolPanel, 1);
+            MainGrid.Children.Add(toolPanel);
         }
     }
 }

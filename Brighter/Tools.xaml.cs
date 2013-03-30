@@ -18,7 +18,7 @@ namespace Brighter
     /// <summary>
     /// Interaction logic for Tools.xaml
     /// </summary>
-    public partial class Tools : Page
+    public partial class Tools : UserControl
     {
         public Tools()
         {

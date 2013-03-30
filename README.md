@@ -1,5 +1,4 @@
 Brighter
 ========
 
-image redactor
-bla
+A simple and effective program for image processing.
