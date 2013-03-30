@@ -18,11 +18,24 @@ namespace Brighter
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
     public partial class MainWindow : Window
     {
+        MenuBar menu;
+
         public MainWindow()
         {
             InitializeComponent();
+            InitializeOtherComponents();
+        }
+
+        private void InitializeOtherComponents()
+        {
+            menu = new MenuBar();
+            Grid.SetColumn(menu, 0);
+            Grid.SetRow(menu, 0);
+            Grid.SetColumnSpan(menu, 2);
+            this.MainGrid.Children.Add(menu);
         }
     }
 }
