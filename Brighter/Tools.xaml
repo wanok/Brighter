@@ -2,11 +2,38 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:custom="clr-namspace:Brighter"
-      mc:Ignorable="d" Height="auto" Width="auto">
-    <WrapPanel Orientation="Horizontal" Height="auto" Width="auto" Background="Transparent">
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+    <WrapPanel Width="auto" Background="Transparent">
+        <RadioButton Name="BrushTool" Style="{StaticResource ResourceKey=ToolButton}">
+            <RadioButton.Resources>
+                <ImageSource x:Key="Img">resources/brushIcon.png</ImageSource>
+            </RadioButton.Resources> 
+        </RadioButton>
+        <RadioButton Name="ZoomTool" Style="{StaticResource ResourceKey=ToolButton}">
+            <RadioButton.Resources>
+                <ImageSource x:Key="Img">resources/zoomIcon.png</ImageSource>
+            </RadioButton.Resources>
+        </RadioButton>
+        <RadioButton Name="MoveTool" Style="{StaticResource ResourceKey=ToolButton}">
+            <RadioButton.Resources>
+                <ImageSource x:Key="Img">resources/moveIcon.png</ImageSource>
+            </RadioButton.Resources>
+        </RadioButton>
         <RadioButton Style="{StaticResource ResourceKey=ToolButton}">
+            <RadioButton.Resources>
+                <ImageSource x:Key="Img">resources/textIcon.png</ImageSource>
+            </RadioButton.Resources>
+        </RadioButton>
+        <RadioButton Style="{StaticResource ResourceKey=ToolButton}">
+            <RadioButton.Resources>
+                <ImageSource x:Key="Img">resources/cutIcon.png</ImageSource>
+            </RadioButton.Resources>
+        </RadioButton>
+        <RadioButton Style="{StaticResource ResourceKey=ToolButton}">
+            <RadioButton.Resources>
+                <ImageSource x:Key="Img">resources/selectIcon.png</ImageSource>
+            </RadioButton.Resources>
         </RadioButton>
     </WrapPanel>
 </UserControl>

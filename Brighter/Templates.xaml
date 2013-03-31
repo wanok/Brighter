@@ -7,10 +7,11 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
-                    <Grid Width="64" Height="64">
+                    <Grid Margin="0 2 2 0">
                         <Grid.Background>
                             <SolidColorBrush x:Name="ButtonBackBrush" Color="Transparent" />
                         </Grid.Background>
+                        <Image Source="{DynamicResource ResourceKey=Img}" Width="64" Height="64"></Image>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <EventTrigger RoutedEvent="Checked">
@@ -18,6 +19,14 @@
                                 <Storyboard>
                                     <ColorAnimation  Storyboard.TargetName="ButtonBackBrush" Duration="0:0:0.2" Storyboard.TargetProperty="Color"
                                                     To="{StaticResource ResourceKey=ActiveColor}"></ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Unchecked">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation  Storyboard.TargetName="ButtonBackBrush" Duration="0:0:0.2" Storyboard.TargetProperty="Color"
+                                                    To="Transparent"></ColorAnimation>
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>

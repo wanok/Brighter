@@ -18,9 +18,9 @@ namespace Brighter
     /// <summary>
     /// Interaction logic for Canvas.xaml
     /// </summary>
-    public partial class Canvas : UserControl
+    public partial class CustomCanvas : UserControl
     {
-        public Canvas()
+        public CustomCanvas()
         {
             InitializeComponent();
             
