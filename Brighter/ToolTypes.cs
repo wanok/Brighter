@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Brighter
 {
-    class ToolTypes
+    enum ToolsTypes
     {
+        Brush, Move, Zoom, Crop, Text, Eyedroper
     }
 }

@@ -7,5 +7,6 @@ namespace Brighter
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

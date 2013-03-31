@@ -11,7 +11,7 @@
                         <Grid.Background>
                             <SolidColorBrush x:Name="ButtonBackBrush" Color="Transparent" />
                         </Grid.Background>
-                        <Image Source="{DynamicResource ResourceKey=Img}" Width="64" Height="64"></Image>
+                        <Image Source="{DynamicResource ResourceKey=Img}" Width="auto" Height="auto"></Image>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <EventTrigger RoutedEvent="Checked">

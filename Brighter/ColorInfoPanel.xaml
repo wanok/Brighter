@@ -3,9 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
+             mc:Ignorable="d" Margin="0, 10, 0, 10" BorderBrush="#FF1C6D8D" BorderThickness="0, 4, 0, 4">
+    <Grid Width="auto" Height="70">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="32"></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <RadioButton Style="{StaticResource ToolButton}" Width="32" Height="32" 
+                     GroupName="Tools" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3">
+            <RadioButton.Resources>
+                <ImageSource x:Key="Img">resources/eyedroperIcon.png</ImageSource>
+            </RadioButton.Resources>
+        </RadioButton>
+        <Rectangle Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"
+                   Width="64" Height="64" >
+            <Rectangle.Fill>
+                <SolidColorBrush Color="{StaticResource ActiveColor}"></SolidColorBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Name="RedComponent" Grid.Row="0" Grid.Column="2">R: </TextBlock>
+        <TextBlock Name="GreenComponent" Grid.Row="1" Grid.Column="2">G: </TextBlock>
+        <TextBlock Name="BlueComponent" Grid.Row="2" Grid.Column="2">B: </TextBlock>
     </Grid>
 </UserControl>

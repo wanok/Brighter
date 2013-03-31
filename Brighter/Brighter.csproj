@@ -36,6 +36,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -53,13 +55,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ColorInfoPanel.xaml.cs">
+      <DependentUpon>ColorInfoPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomCanvas.xaml.cs">
       <DependentUpon>CustomCanvas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LayersPanel.xaml.cs">
+      <DependentUpon>LayersPanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tools.xaml.cs">
       <DependentUpon>Tools.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ToolTypes.cs" />
+    <Page Include="ColorInfoPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CustomCanvas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LayersPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -129,6 +146,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\selectIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\eyedroperIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
