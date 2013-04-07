@@ -1,5 +1,8 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Collections.Generic;
+using System.Windows.Input;
+using System.Windows.Media;
 
 namespace Brighter
 {
@@ -11,10 +14,11 @@ namespace Brighter
     {
         private MenuBar Menu;
         private Tools toolPanel;
-        CustomCanvas canvas;
         private ColorInfoPanel colorPanel;
         internal static ToolsTypes CurrentTool { get; set; }
         private LayersPanel layersPanel;
+        private static LayersManager lManager;
+        private static System.Windows.Controls.Canvas CanvasHolder;
 
         public MainWindow()
         {
@@ -41,6 +45,21 @@ namespace Brighter
             Grid.SetColumn(layersPanel, 1);
             Grid.SetRow(layersPanel, 3);
             MainGrid.Children.Add(layersPanel);
+            lManager = new LayersManager();
+            CanvasHolder = new Canvas();
+            CanvasHolder.Background = new SolidColorBrush(Colors.Gray);
+            Viewport.Content = CanvasHolder;
+        }
+
+        public static void Refresh()
+        {
+            CanvasHolder.Children.Clear();
+            var lE = LayersManager.LayersProperty.GetEnumerator();
+            while (lE.MoveNext())
+            {
+                Canvas.SetZIndex(lE.Current, lE.Current.zIndex);
+                CanvasHolder.Children.Add(lE.Current);
+            }
         }
     }
 }

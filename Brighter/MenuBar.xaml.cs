@@ -1,28 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Forms;
 
 namespace Brighter
 {
     /// <summary>
     /// Interaction logic for MenuBar.xaml
     /// </summary>
-    public partial class MenuBar : UserControl
+    public partial class MenuBar : System.Windows.Controls.UserControl
     {
         public MenuBar()
         {
             InitializeComponent();
+        }
+
+        void File_Open_Click(Object sender, RoutedEventArgs eventArgs)
+        {
+            var openFile = new OpenFileDialog
+                {
+                    Filter = "Image Files (*.PNG; *.JPG; *.JPEG; *.GIF) | *.PNG; *.JPG; *.JPEG; *.GIF",
+                    FilterIndex = 2
+                };
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                LayersManager.AddLayer(new Layer(openFile.FileName, 0));
+                MainWindow.Refresh();
+            }
+        }
+
+        private void CheckExistsFile()
+        {
+            
         }
     }
 }

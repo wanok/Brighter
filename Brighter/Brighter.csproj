@@ -58,9 +58,10 @@
     <Compile Include="ColorInfoPanel.xaml.cs">
       <DependentUpon>ColorInfoPanel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CustomCanvas.xaml.cs">
-      <DependentUpon>CustomCanvas.xaml</DependentUpon>
+    <Compile Include="Layer.xaml.cs">
+      <DependentUpon>Layer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LayersManager.cs" />
     <Compile Include="LayersPanel.xaml.cs">
       <DependentUpon>LayersPanel.xaml</DependentUpon>
     </Compile>
@@ -72,7 +73,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CustomCanvas.xaml">
+    <Page Include="Layer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -149,6 +150,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\eyedroperIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\worm_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\electro.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

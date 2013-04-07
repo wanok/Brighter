@@ -3,6 +3,18 @@
     <SolidColorBrush x:Key="BackgroundColor" Color="#FF6DCFF6" />
     <SolidColorBrush x:Key="ActiveButtonColor" Color="#FF55A1BF" />
     <Color x:Key="ActiveColor" A="255" R="85" G="161" B="191"></Color>
+    <DrawingBrush x:Key="BgBrush" Viewport="0,0,0.25,0.25" TileMode="Tile">
+        <DrawingBrush.Drawing>
+            <GeometryDrawing Brush="White">
+                <GeometryDrawing.Geometry>
+                    <GeometryGroup>
+                        <RectangleGeometry Rect="0, 0, 5, 5" />
+                        <RectangleGeometry Rect="5, 5, 5, 5" />
+                    </GeometryGroup>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
     <Style x:Key="ToolButton" TargetType="RadioButton">
         <Setter Property="Template">
             <Setter.Value>
